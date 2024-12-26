@@ -45,7 +45,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            sdhfhsdfhsdhfh Ben Ben Ben
+            Ben Ben
           </a>
         </div>
       </main>
