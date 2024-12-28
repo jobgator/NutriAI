@@ -1,13 +1,20 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 
+export const publicRoutes = ["/", "/sign-in", "/sign-up", "/sign-in/sso-callback"];
+
 export default clerkMiddleware();
 
 export const config = {
-    matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
+    matcher: [
+        /*
+         * Match all request paths except for the ones starting with:
+         * - _next/static (static files)
+         * - _next/image (image optimization files)
+         * - favicon.ico (favicon file)
+         * - public folder
+         */
+        "/((?!.*\\..*|_next).*)",
+        "/",
+        "/(api|trpc)(.*)",
+    ],
 };
-
-// In your middleware.ts, add routes that require authentication
-// Any route not listed as public will require authentication
-export const publicRoutes = ["/", "/sign-in", "/sign-up"];
-
-
