@@ -7,6 +7,7 @@ import {
     Loader2, ChevronRight, ChevronLeft, Users, Heart, Cookie, Timer,
     ChefHat, Scale, Info, Apple, Carrot, Coffee, UtensilsCrossed
 } from 'lucide-react';
+import MealPlanner from '@/components/MealPlanner';
 
 // Define Card components directly in this file
 const Card = ({ children, className }) => {
@@ -87,6 +88,7 @@ const LandingPage = () => {
                 {/* Your content here */}
 
                 sdfhsdhfsdhfhsdhfsdhfhsdfhsdfhdhsfhdsfhsdfh
+                <MealPlanner />
             </main>
             {/* Footer */}
             <footer className="bg-gray-800 text-white py-4 px-6">
