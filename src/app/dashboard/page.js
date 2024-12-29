@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from "next/link";
 import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
+import MealPlanner from '@/components/MealPlanner';
 /* import {
     Loader2, ChevronRight, ChevronLeft, Users, Heart, Cookie, Timer,
     ChefHat, Scale, Info, Apple, Carrot, Coffee, UtensilsCrossed
@@ -86,7 +87,11 @@ const LandingPage = () => {
             <main className="flex-grow container mx-auto px-6 py-8">
                 {/* Your content here */}
 
-                Stevensdfhsdhfsdhfhsdfhsdfhsdfh            </main>
+                Stevensdfhsdhfsdhfhsdfhsdfhsdfh
+
+                <MealPlanner />
+
+            </main>
             {/* Footer d*/}
             <footer className="bg-gray-800 text-white py-4 px-6">
                 <div className="container mx-auto text-center">
