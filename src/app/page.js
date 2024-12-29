@@ -1,10 +1,8 @@
 // pages/landing.js
 import Link from "next/link";
-import { useClerk, SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
 
 const LandingPage = () => {
-    const { user } = useClerk();
-
     return (
         <div className="flex flex-col min-h-screen">
             {/* Header */}
@@ -16,7 +14,9 @@ const LandingPage = () => {
                     <nav className="flex items-center space-x-4">
                         <SignedIn>
                             <div className="flex items-center space-x-2">
-                                <span className="text-white">{user.firstName}</span>
+                                <Link href="/dashboard" className="text-white hover:underline">
+                                    Dashboard
+                                </Link>
                                 <SignOutButton>
                                     <button className="bg-gray-500 hover:bg-gray-600 text-white px-3 py-2 rounded">
                                         Logout
