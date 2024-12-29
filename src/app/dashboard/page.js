@@ -232,7 +232,7 @@ const MealPlanner = () => {
         </Card>
     );
 
-    // ... [Previous renderDietaryPreferences and renderMealPlan functions remain the same]
+    // .... [Previous renderDietaryPreferences and renderMealPlan functions remain the same]
 
     const renderProgress = () => (
         <div className="flex justify-center mb-8">
