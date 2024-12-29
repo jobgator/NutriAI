@@ -3,67 +3,10 @@
 import React, { useState } from 'react';
 import Link from "next/link";
 import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
-import MealPlanner from '@/components/meal-planner/MealPlanner';
+import MealPlanner from '@/components/meal-planner/MealPlanner.js';
 
-//import MealPlanner from '@/components/MealPlanner';
-/* import {
-    Loader2, ChevronRight, ChevronLeft, Users, Heart, Cookie, Timer,
-    ChefHat, Scale, Info, Apple, Carrot, Coffee, UtensilsCrossed
-} from 'lucide-react';
 
-// Define Card components directly in this file
-const Card = ({ children, className }) => {
-    return <div className={`card ${className}`}>{children}</div>;
-};
-
-const CardHeader = ({ children, className }) => {
-    return <div className={`card-header ${className}`}>{children}</div>;
-};
-
-const CardTitle = ({ children, className }) => {
-    return <div className={`card-title ${className}`}>{children}</div>;
-};
-
-const CardDescription = ({ children, className }) => {
-    return <div className={`card-description ${className}`}>{children}</div>;
-};
-
-const CardContent = ({ children, className }) => {
-    return <div className={`card-content ${className}`}>{children}</div>;
-};
-
-// Define other components directly in this file
-const Button = ({ children, onClick, className }) => {
-    return <button onClick={onClick} className={className}>{children}</button>;
-};
-
-const Input = (props) => {
-    return <input {...props} />;
-};
-
-const Label = ({ children, htmlFor, className }) => {
-    return <label htmlFor={htmlFor} className={className}>{children}</label>;
-};
-
-const Tooltip = ({ text, children }) => {
-    return (
-        <div className="tooltip">
-            {children}
-            <span className="tooltiptext">{text}</span>
-        </div>
-    );
-};
-
-const Alert = ({ message, type }) => {
-    const alertType = type === 'error' ? 'alert-error' : 'alert-info';
-    return (
-        <div className={`alert ${alertType}`}>
-            {message}
-        </div>
-    );
-}; */
-
-const LandingPage = () => {
+const DashboardPage = () => {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Header */}
@@ -104,4 +47,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default DashboardPage;
