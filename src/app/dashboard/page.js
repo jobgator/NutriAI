@@ -1,24 +1,23 @@
 'use client';
 
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import Tooltip from '@/components/ui/tooltip';
-import Alert from '@/components/ui/alert';
+import {
+    Tooltip as TooltipComponent,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger
+} from '@/components/ui/tooltip';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from "next/link";
+import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
 import {
     Loader2, ChevronRight, ChevronLeft, Users, Heart, Cookie, Timer,
     ChefHat, Scale, Info, Apple, Carrot, Coffee, UtensilsCrossed
 } from 'lucide-react';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const MealPlanner = () => {
     const [started, setStarted] = useState(false);
