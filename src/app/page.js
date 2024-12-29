@@ -1,8 +1,10 @@
 // pages/landing.js
 import Link from "next/link";
-import { SignedIn, SignedOut, SignUpButton } from '@clerk/nextjs';
+import { useClerk, SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
 
 const LandingPage = () => {
+    const { user } = useClerk();
+
     return (
         <div className="flex flex-col min-h-screen">
             {/* Header */}
@@ -11,24 +13,36 @@ const LandingPage = () => {
                     <Link href="/" className="text-xl font-bold">
                         NutriAI
                     </Link>
-                    <nav>
-                        <ul className="flex space-x-4">
-                            <li>
-                                <Link href="#features" className="hover:underline">
-                                    Features
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#pricing" className="hover:underline">
-                                    Pricing
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#contact" className="hover:underline">
-                                    Contact
-                                </Link>
-                            </li>
-                        </ul>
+                    <nav className="flex items-center space-x-4">
+                        <SignedIn>
+                            <div className="flex items-center space-x-2">
+                                <span className="text-white">{user.firstName}</span>
+                                <SignOutButton>
+                                    <button className="bg-gray-500 hover:bg-gray-600 text-white px-3 py-2 rounded">
+                                        Logout
+                                    </button>
+                                </SignOutButton>
+                            </div>
+                        </SignedIn>
+                        <SignedOut>
+                            <ul className="flex space-x-4">
+                                <li>
+                                    <Link href="#features" className="hover:underline">
+                                        Features
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#pricing" className="hover:underline">
+                                        Pricing
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#contact" className="hover:underline">
+                                        Contact
+                                    </Link>
+                                </li>
+                            </ul>
+                        </SignedOut>
                     </nav>
                 </div>
             </header>
