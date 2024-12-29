@@ -1,67 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from "next/link";
 import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
 import MealPlanner from '@/components/MealPlanner';
-/* import {
-    Loader2, ChevronRight, ChevronLeft, Users, Heart, Cookie, Timer,
-    ChefHat, Scale, Info, Apple, Carrot, Coffee, UtensilsCrossed
-} from 'lucide-react';
 
-// Define Card components directly in this file
-const Card = ({ children, className }) => {
-    return <div className={`card ${className}`}>{children}</div>;
-};
-
-const CardHeader = ({ children, className }) => {
-    return <div className={`card-header ${className}`}>{children}</div>;
-};
-
-const CardTitle = ({ children, className }) => {
-    return <div className={`card-title ${className}`}>{children}</div>;
-};
-
-const CardDescription = ({ children, className }) => {
-    return <div className={`card-description ${className}`}>{children}</div>;
-};
-
-const CardContent = ({ children, className }) => {
-    return <div className={`card-content ${className}`}>{children}</div>;
-};
-
-// Define other components directly in this file
-const Button = ({ children, onClick, className }) => {
-    return <button onClick={onClick} className={className}>{children}</button>;
-};
-
-const Input = (props) => {
-    return <input {...props} />;
-};
-
-const Label = ({ children, htmlFor, className }) => {
-    return <label htmlFor={htmlFor} className={className}>{children}</label>;
-};
-
-const Tooltip = ({ text, children }) => {
-    return (
-        <div className="tooltip">
-            {children}
-            <span className="tooltiptext">{text}</span>
-        </div>
-    );
-};
-
-const Alert = ({ message, type }) => {
-    const alertType = type === 'error' ? 'alert-error' : 'alert-info';
-    return (
-        <div className={`alert ${alertType}`}>
-            {message}
-        </div>
-    );
-}; */
-
-const LandingPage = () => {
+export default function Dashboard() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Header */}
@@ -74,7 +18,6 @@ const LandingPage = () => {
                         <SignedIn>
                             <div className="flex items-center space-x-2">
                                 <SignOutButton />
-
                             </div>
                         </SignedIn>
                         <SignedOut>
@@ -83,23 +26,18 @@ const LandingPage = () => {
                     </nav>
                 </div>
             </header>
+
             {/* Main Content */}
             <main className="flex-grow container mx-auto px-6 py-8">
-                {/* Your content here */}
-
-                Stevensdfhsdhfsdhfhsdfhsdfhsdfh
-
                 <MealPlanner />
-
             </main>
-            {/* Footer d*/}
+
+            {/* Footer */}
             <footer className="bg-gray-800 text-white py-4 px-6">
                 <div className="container mx-auto text-center">
-                    &copy; 2023 Ben NutriAI. All rights reserved.
+                    &copy; {new Date().getFullYear()} Ben NutriAI. All rights reserved.
                 </div>
             </footer>
         </div>
     );
-};
-
-export default LandingPage;
+}
