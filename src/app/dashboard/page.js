@@ -17,6 +17,9 @@ const DashboardPage = () => {
                     </Link>
                     <nav className="flex items-center space-x-4">
                         <SignedIn>
+                            <Link href="/dashboard" className="text-xl font-bold">
+                                Features
+                            </Link>
                             <div className="flex items-center space-x-2">
                                 <SignOutButton />
 
