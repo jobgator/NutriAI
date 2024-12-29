@@ -1,15 +1,36 @@
 // pages/landing.js
 import Link from "next/link";
-import { useClerk, SignedIn, SignedOut, SignUpButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, SignUpButton } from '@clerk/nextjs';
 
 const LandingPage = () => {
-    const { user } = useClerk();
-
     return (
         <div className="flex flex-col min-h-screen">
             {/* Header */}
             <header className="bg-gray-800 text-white py-4 px-6">
-                {/* ... */}
+                <div className="container mx-auto flex justify-between items-center">
+                    <Link href="/" className="text-xl font-bold">
+                        NutriAI
+                    </Link>
+                    <nav>
+                        <ul className="flex space-x-4">
+                            <li>
+                                <Link href="#features" className="hover:underline">
+                                    Features
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#pricing" className="hover:underline">
+                                    Pricing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#contact" className="hover:underline">
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
 
             <main className="flex-1 py-12 md:py-24">
@@ -47,7 +68,23 @@ const LandingPage = () => {
 
             {/* Footer */}
             <footer className="bg-gray-800 text-white py-6">
-                {/* ... */}
+                <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+                    <p className="text-sm">&copy; 2023 NutriAI. All rights reserved.</p>
+                    <nav>
+                        <ul className="flex space-x-4">
+                            <li>
+                                <Link href="#" className="hover:underline">
+                                    Terms of Service
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="hover:underline">
+                                    Privacy Policy
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </footer>
         </div>
     );
