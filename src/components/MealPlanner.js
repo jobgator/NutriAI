@@ -1,3 +1,14 @@
+'use client';
+
+import React, { useState } from 'react';
+// ... rest of your imports
+
+const MealPlanner = () => {
+    // ... your component code
+};
+
+export default MealPlanner;
+
 /*"use client";
 
 import React, { useState } from 'react';
