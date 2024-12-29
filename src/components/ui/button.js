@@ -39,4 +39,6 @@ Button.propTypes = {
     className: PropTypes.string,
 };
 
-export default Button;
+export function Button({ children, ...props }) {
+    return <button {...props}>{children}</button>;
+}
