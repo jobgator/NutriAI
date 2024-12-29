@@ -1,21 +1,9 @@
-//pages / landing.js
-
-//import Card from '@/components/ui/card';
-//import Button from '@/components/ui/button';
-//import Input from '@/components/ui/input';
-//import Label from '@/components/ui/label';
 'use client';
+
 import Link from "next/link";
 import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
 
 export default function Home() {
-    return (
-        <main>
-        </main>
-    );
-}
-
-const LandingPage = () => {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Header */}
@@ -88,15 +76,12 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </section>
-
-                {/* Rest of the landing page content */}
-
             </main>
 
             {/* Footer */}
             <footer className="bg-gray-800 text-white py-6">
                 <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-                    <p className="text-sm">&copy; 2023 NutriAI. All rights reserved.</p>
+                    <p className="text-sm">&copy; {new Date().getFullYear()} NutriAI. All rights reserved.</p>
                     <nav>
                         <ul className="flex space-x-4">
                             <li>
@@ -115,5 +100,4 @@ const LandingPage = () => {
             </footer>
         </div>
     );
-};
-
+}
