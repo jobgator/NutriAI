@@ -89,7 +89,6 @@ const LandingPage = () => {
 
                 Stevensdfhsdhfsdhfhsdfhsdfhsdfh
 
-                <MealPlanner />
 
             </main>
             {/* Footer d*/}
