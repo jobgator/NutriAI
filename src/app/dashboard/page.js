@@ -88,7 +88,7 @@ const LandingPage = () => {
 
                 sdfhsdhfsdhfhsdhfsdhfhsdfhsdfhdhsfhdsfhsdfh
             </main>
-            {/* Footer */}
+            {/* Footer d*/}
             <footer className="bg-gray-800 text-white py-4 px-6">
                 <div className="container mx-auto text-center">
                     &copy; 2023 Ben NutriAI. All rights reserved.
