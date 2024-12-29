@@ -11,7 +11,7 @@ import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs'
 export default function Home() {
     return (
         <main>
-            <MealPlanner />
+
         </main>
     );
 }
