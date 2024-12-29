@@ -72,9 +72,8 @@ const LandingPage = () => {
                     <nav className="flex items-center space-x-4">
                         <SignedIn>
                             <div className="flex items-center space-x-2">
-                                <Tooltip text="Sign Out">
-                                    <SignOutButton />
-                                </Tooltip>
+                                <SignOutButton />
+
                             </div>
                         </SignedIn>
                         <SignedOut>
