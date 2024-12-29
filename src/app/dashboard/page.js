@@ -66,7 +66,7 @@ const LandingPage = () => {
             {/* Header */}
             <header className="bg-gray-800 text-white py-4 px-6">
                 <div className="container mx-auto flex justify-between items-center">
-                    <Link href="/" className="text-xl font-bold">
+                    <Link href="/dashboard" className="text-xl font-bold">
                         NutriAI
                     </Link>
                     <nav className="flex items-center space-x-4">
@@ -85,6 +85,8 @@ const LandingPage = () => {
             {/* Main Content */}
             <main className="flex-grow container mx-auto px-6 py-8">
                 {/* Your content here */}
+
+                sdfhsdhfsdhfhsdhfsdhfhsdfhsdfhdhsfhdsfhsdfh
             </main>
             {/* Footer */}
             <footer className="bg-gray-800 text-white py-4 px-6">
