@@ -1,3 +1,6 @@
+'use client';
+
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -238,10 +241,10 @@ const MealPlanner = () => {
                     <React.Fragment key={step}>
                         <div
                             className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 transform hover:scale-110 ${currentStep === step
-                                    ? 'bg-blue-500 text-white'
-                                    : currentStep > step
-                                        ? 'bg-green-500 text-white'
-                                        : 'bg-gray-200'
+                                ? 'bg-blue-500 text-white'
+                                : currentStep > step
+                                    ? 'bg-green-500 text-white'
+                                    : 'bg-gray-200'
                                 }`}
                         >
                             {step}
