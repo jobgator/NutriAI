@@ -87,7 +87,6 @@ const LandingPage = () => {
                 {/* Your content here */}
 
                 BenBenBenBenBenBen Besg dgsdghsdgsdg
-                <div>hdsfhsdfhsfd</div>
             </main>
             {/* Footer d*/}
             <footer className="bg-gray-800 text-white py-4 px-6">
