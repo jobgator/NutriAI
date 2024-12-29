@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from "next/link";
 import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
-import MealPlanner from '@/components/MealPlanner';
+import MealPlanner from '@/components/meal-planner/MealPlanner';
 
 //import MealPlanner from '@/components/MealPlanner';
 /* import {
