@@ -18,7 +18,7 @@ const DashboardPage = () => {
                     <nav className="flex items-center space-x-4">
                         <SignedIn>
                             {/* Features Dropdown */}
-                            <div className="relative" ref={dropdownRef}>
+                            <div className="relative">
                                 <button
                                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                     className="flex items-center space-x-1 hover:text-gray-300 transition-colors py-2"
@@ -29,7 +29,10 @@ const DashboardPage = () => {
 
                                 {/* Dropdown Menu */}
                                 {isDropdownOpen && (
-                                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                                    <div
+                                        className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                                        onBlur={() => setIsDropdownOpen(false)}
+                                    >
                                         <Link
                                             href="/meal-planner"
                                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2"
@@ -57,6 +60,7 @@ const DashboardPage = () => {
                                     </div>
                                 )}
                             </div>
+
                             <div className="flex items-center space-x-2">
                                 <SignOutButton />
 
