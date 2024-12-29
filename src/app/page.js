@@ -1,9 +1,9 @@
-// pages/landing.js
+pages / landing.js
 
 //import Card from '@/components/ui/card';
 //import Button from '@/components/ui/button';
 //import Input from '@/components/ui/input';
-//import Label from '@/components/ui/label';
+import Label from '@/components/ui/label';
 
 import Link from "next/link";
 import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs';
@@ -11,7 +11,6 @@ import { SignedIn, SignedOut, SignUpButton, SignOutButton } from '@clerk/nextjs'
 export default function Home() {
     return (
         <main>
-            <MealPlanner />
         </main>
     );
 }
