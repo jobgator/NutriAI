@@ -1,4 +1,4 @@
-pages / landing.js
+//pages / landing.js
 
 //import Card from '@/components/ui/card';
 //import Button from '@/components/ui/button';
