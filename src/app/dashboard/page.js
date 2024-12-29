@@ -86,8 +86,7 @@ const LandingPage = () => {
             <main className="flex-grow container mx-auto px-6 py-8">
                 {/* Your content here */}
 
-                BenBenBenBenBenBen Besg dgsdghsdgsdg
-            </main>
+                Stevensdfhsdhfsdhfhsdfhsdfhsdfh            </main>
             {/* Footer d*/}
             <footer className="bg-gray-800 text-white py-4 px-6">
                 <div className="container mx-auto text-center">
